@@ -1,0 +1,28 @@
+name:                hRadian
+version:             0.1.0.0
+synopsis:            Haskell interface for Radian HTML plotting library
+homepage:            http://openbrainsrc.github.io/Radian/
+license:             OtherLicense
+license-file:        LICENSE
+author:              Ian Ross
+maintainer:          ian@skybluetrades.net
+copyright:           OpenBrain Ltd. 2013
+category:            Graphics
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >= 1.10
+
+library
+  exposed-modules:     Graphics.Radian
+  -- other-modules:
+  build-depends:       base              >= 4.6      && < 4.7
+  default-language:    Haskell2010
+
+executable example-server
+  main-is:             example-server.hs
+  other-modules:       Example.Eg01
+  build-depends:       base              >= 4.6      && < 4.7,
+                       hRadian
+  hs-source-dirs:      examples
+  default-language:    Haskell2010
+
