@@ -21,8 +21,10 @@ library
 executable example-server
   main-is:             example-server.hs
   other-modules:       Example.Eg01
-  build-depends:       base              >= 4.6      && < 4.7,
-                       hRadian
+  build-depends:       base                    >= 4.6      && < 4.7,
+                       hRadian,
+                       scotty                  >= 0.5.0    && < 0.6,
+                       wai-middleware-static   >= 0.3.2    && < 0.4
   hs-source-dirs:      examples
   default-language:    Haskell2010
 
